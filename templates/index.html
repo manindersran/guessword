@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GuessWorld</title>
+    <link rel="stylesheet" href="static/style.css?version=31" type="text/css" />
+</head>
+
+<body>
+    <div>
+    <h1>Word Guessing Game</h1>
+   
+   
+    <h5>Please make a guess:</h5>
+   <p>Word:</p>
+   <h2>{{ blanks }}</h2>
+   
+   <h2>{{newBlanks}}</h2>
+   
+   <h2>{{win}}</h2>
+   
+   <h3>{{lose}}</h3>
+   <p>Use ( _ ) for space</p>
+    
+   <h3>{{wrong}}</h3>
+    
+  
+    
+   <form method="post" action="{{ url_for('guess') }}">
+        <input type="text" name="guess" /><br />
+        <input type="submit" id="submit"/>
+        <input type="button" onclick="myFunction()" value="Reset" />
+   </form>
+   
+   <p>Hint: Word is name of a movie.</p>
+   </div> 
+   
+   <footer>
+    <div>
+     <p>copyrirght@2016games</p>  
+    </div>
+     
+</footer>
+</body>
+
+   <script>
+       function myFunction() {
+       document.location.reload();
+}
+
+   </script>
+
+</html>
