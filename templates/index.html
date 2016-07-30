@@ -29,9 +29,10 @@
    <form method="post" action="{{ url_for('guess') }}">
         <input type="text" name="guess" /><br />
         <input type="submit" id="submit"/>
-        <input type="button" onclick="myFunction()" value="Reset" />
+        <!--<input type="button" onclick="myFunction()" value="Reset" />-->
+         <button id ="reset"><a href="{{ url_for('index') }}">Reset</a></button>
    </form>
-   
+  
    <p>Hint: Word is name of a movie.</p>
    </div> 
    

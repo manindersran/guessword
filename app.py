@@ -17,10 +17,10 @@ app = Flask(__name__)
 # ==========================================================
 imdb=[]
 
-for index in range(0, len(movies)):
-    movie_string = movies[index].get_text()
+for inde in range(0, len(movies)):
+    movie_string = movies[inde].get_text()
     movie = (' '.join(movie_string.split()).replace('.', ''))
-    movie_title = movie[len(str(index))+1:-7]
+    movie_title = movie[len(str(inde))+1:-7]
     data = movie_title
     imdb.append(data)
 # print(imdb)
@@ -34,7 +34,7 @@ def foo():
     
 # Define a route for the default URL, which loads the form
 @app.route('/')
-def form():
+def index():
         randWord =""
         randWord = random.choice(imdb).upper().replace(" ", "_").replace(":", "_").replace("'", "_")
         global randWord

@@ -30,7 +30,7 @@ input[type=text]{
     margin: 10px 0;
     width: 180px;
 }
-input[type=submit], input[type=button]{
+input[type=submit], #reset{
 		    border: none;
     font-size: 30px;
     cursor: pointer;
@@ -40,6 +40,7 @@ input[type=submit], input[type=button]{
     background-color: #def7c9;
     padding: 4px;
 }
+#reset a{text-decoration: none; color: black;}
 h3{
 	text-align: center;
 }
